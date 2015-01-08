@@ -1,16 +1,15 @@
 <img src="http://www.cocos2d-x.org/attachments/801/cocos2dx_portrait.png" width=200>
 
 
-Project Template
+Django Project Template
 ===
 [![Build Status](https://travis-ci.org/cocos2d/cocos2d-x.png?branch=v3)](https://travis-ci.org/cocos2d/cocos2d-x)
 [![Build Status](https://travis-ci.org/cocos-travis-mac/cocos2d-x.png?branch=v3)](https://travis-ci.org/cocos-travis-mac/cocos2d-x)
 
-[cocos2d-x][1] is a multi-platform framework for building 2d games, interactive books, demos and other graphical applications.
-It is based on [cocos2d-iphone][2], but instead of using Objective-C, it uses C++.
+[Django][1] is a multi-platform framework for building 2d games, interactive books, demos and other graphical applications.
 It works on iOS, Android, Windows Phone, OS X, Windows and Linux.
 
-cocos2d-x is:
+Django is:
 
   * Fast
   * Free
@@ -37,10 +36,8 @@ Tutorial
 Contact us
 ----------
 
-   * Forum: [http://forum.cocos2d-x.org][9]
-   * Twitter: [http://www.twitter.com/cocos2dx][10]
-   * Weibo: [http://t.sina.com.cn/cocos2dx][11]
-   * IRC: [https://webchat.freenode.net/][12] (#cocos2d and #cocos2d-x channels)
+   * Website: [http://cybots.info][9]
+   * Twitter: [https://twitter.com/NgoTrongTrung][10]
 
 [1]: http://www.cocos2d-x.org "cocos2d-x"
 [2]: http://www.cocos2d-iphone.org "cocos2d for iPhone"
