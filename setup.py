@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
-from django_template import __version__
+from cybots import __version__
 
 setup(
-    name='{{ django_template }}',
+    name='{{ cybots }}',
     version=__version__,
 
     url='http://host/',

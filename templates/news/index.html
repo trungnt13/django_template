@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>News</title>
+</head>
+<body>
+{% for new in news %}
+<div style="font-size: 20px">
+	<a href="{{new.link}}" style="font-size: 26px;font-style: bold">
+		{{new.title}}
+	</a>
+	<br>
+	<i style="font-size: 13px;position:relative;top:-6px">
+		{{new.pubDate}}
+	</i>
+	<br>
+	{{new.description}}
+	<hr style="width:67%;margin-left: 0px;border-style: inset;border-width: 1px;">
+</div>
+{% endfor %}
+
+</body>
+</html>

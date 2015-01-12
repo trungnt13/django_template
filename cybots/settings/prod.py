@@ -1,5 +1,5 @@
 """
-Django settings for project_template project.
+Django settings for cybots project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -29,6 +29,7 @@ SECRET_KEY = '-76d502i&85dp#-g%&+g*5^%m3rk3+j020((-^^k0(7tta303y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -37,7 +38,6 @@ SITE_ID = 1
 #########################################################
 # Template
 #########################################################
-TEMPLATE_DEBUG = True
 
 # TEMPLATE_LOADERS = (
 #     'django.template.loaders.filesystem.Loader',
@@ -70,6 +70,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
+    'mongoengine.django.mongo_auth',
+    'cybots.blogs',
+    'cybots.news',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -82,9 +86,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'project_template.urls'
+ROOT_URLCONF = 'cybots.urls'
 
-WSGI_APPLICATION = 'project_template.wsgi.application'
+WSGI_APPLICATION = 'cybots.wsgi.application'
 
 
 #########################################################
@@ -113,6 +117,25 @@ USE_L10N = True
 
 USE_TZ = True
 
+AUTHENTICATION_BACKENDS = (
+    'mongoengine.django.auth.MongoEngineBackend',
+)
+AUTH_USER_MODEL = 'mongo_auth.MongoUser'
+MONGOENGINE_USER_DOCUMENT = 'mongoengine.django.auth.User'
+SESSION_ENGINE = 'mongoengine.django.sessions'
+SESSION_SERIALIZER = 'mongoengine.django.sessions.BSONSerializer'
+
+MONGO_DB = 'news'
+MONGO_HOST = '127.0.0.1'
+MONGO_PORT = 27017
+from mongoengine import connect
+connect(
+    MONGO_DB,
+    username='adminnews',
+    password='news',
+    host=MONGO_HOST,
+    port=MONGO_PORT
+)
 
 #########################################################
 # Static files (CSS, JavaScript, Images)

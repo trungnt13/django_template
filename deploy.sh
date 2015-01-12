@@ -1,5 +1,5 @@
 source $VENV/bin/activate
-export DJANGO_SETTINGS_MODULE=django_template.settings.production
+export DJANGO_SETTINGS_MODULE=cybots.settings.prod
 git pull
 pip install -r requirements.txt
 
@@ -11,4 +11,4 @@ manage.py makemessages -a
 manage.py compilemessages
 
 # restart wsgi
-touch project_name/wsgi.py
+touch cybots/wsgi.py
